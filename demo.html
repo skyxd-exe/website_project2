@@ -1,0 +1,47 @@
+<input type="number" id="box1" value="20">
+<input type="number" id="box2" value="20">
+<button onclick="add()" id="enter">add</button>
+<p id="result">result</p>
+
+<script>
+    var num1=document.getElementById("box1")
+    var num2=document.getElementById("box2")
+    var result=document.getElementById("result") 
+
+    var num1value=Number(num1.value)
+    var num2value=Number(num2.value)
+  
+    function add()
+    {
+      var total = num1value+num2value
+      
+      result.textContent=total
+      
+    }
+    function add() {
+  var box1Value = parseFloat(document.getElementById("box1").value);
+  var box2Value = parseFloat(document.getElementById("box2").value);
+  var sum = box1Value + box2Value;
+  document.getElementById("result").innerText = "Result: " + sum;-
+}
+
+// Get the input elements
+var input1 = document.getElementById("box1");
+var input2 = document.getElementById("box2");
+
+// Execute a function when the user releases a key on the keyboard in input1
+input1.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    add();
+  }
+});
+
+// Execute a function when the user releases a key on the keyboard in input2
+input2.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    add();
+  }
+});
+</script>
